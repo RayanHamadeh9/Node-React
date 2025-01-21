@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <h2>Search</h2>
+    <form id="search-form">
+      <div class="row">
+        <div class="col-md-12">
+          <label for="title">Title:</label>
+          <input type="text" class="form-control search-field rounded" id="title" placeholder="Enter title">
+        </div>
+        <div class="col-md-6">
+          <label for="description">Description:</label>
+          <textarea class="form-control search-field rounded" id="description"
+                    placeholder="Enter description"></textarea>
+        </div>
+        <div class="col-md-6">
+          <label for="category">Category:</label>
+          <select class="form-control search-field rounded" id="category">
+            <option value="">Select category</option>
+            <!-- add options here -->
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="min-level">Min Level:</label>
+          <input type="number" min="0" max="100" class="form-control search-field rounded min-level-input"
+                 id="min-level" value="0" placeholder="Enter min level (0-100)">
+        </div>
+        <div class="col-md-6">
+          <label for="max-level">Max Level:</label>
+          <input type="number" min="0" max="100" class="form-control search-field rounded max-level-input"
+                 id="max-level" value="100" placeholder="Enter max level (0-100)">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="tags">Tags:</label>
+          <input type="text" class="form-control search-field rounded" id="tags"
+                 placeholder="Enter tags (comma separated)">
+          <button class="btn btn-primary add-tag-btn">+</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="author">Author:</label>
+          <input type="text" class="form-control search-field rounded" id="author" placeholder="Enter author">
+        </div>
+        <div class="col-md-6">
+          <label for="lastModifiedDate">Last Modified Date:</label>
+          <app-date-picker-range-popup/>
+        </div>
+      </div>
+      <button class="btn btn-primary advanced-search-btn" data-mode="advanced">Advanced Search</button>
+    </form>
+  </div>
+</div>
